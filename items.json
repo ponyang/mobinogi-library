@@ -1,0 +1,249 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "source": "namu.wiki (CC BY-NC-SA 2.0 KR)",
+    "updated": "2025-02-25",
+    "note": "크롤러로 수집된 데이터. 실제 크롤링 후 교체하세요."
+  },
+  "items": [
+    {
+      "id": 1,
+      "name": "철광석",
+      "type": "MATERIAL",
+      "skill": null,
+      "emoji": "🪨",
+      "tags": ["재료", "광석"],
+      "recipe": null,
+      "sources": [
+        { "type": "GATHER", "name": "광석 캐기", "location": "팀 지방 광산", "dot": "gather" },
+        { "type": "GATHER", "name": "광석 캐기", "location": "코나하트 광산", "dot": "gather" },
+        { "type": "GATHER", "name": "광석 캐기", "location": "반호르 광산", "dot": "gather" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "석탄",
+      "type": "MATERIAL",
+      "skill": null,
+      "emoji": "⬛",
+      "tags": ["재료", "광석"],
+      "recipe": null,
+      "sources": [
+        { "type": "GATHER", "name": "광석 캐기", "location": "코나하트 광산", "dot": "gather" },
+        { "type": "GATHER", "name": "광석 캐기", "location": "반호르 광산", "dot": "gather" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "철 괴",
+      "type": "INTERMEDIATE",
+      "skill": "SMELT",
+      "emoji": "⚙️",
+      "tags": ["제련", "중간재"],
+      "recipe": {
+        "level": 1,
+        "materials": [
+          { "name": "철광석", "qty": 5, "emoji": "🪨" },
+          { "name": "석탄",   "qty": 2, "emoji": "⬛" }
+        ]
+      },
+      "sources": []
+    },
+    {
+      "id": 4,
+      "name": "통나무",
+      "type": "MATERIAL",
+      "skill": null,
+      "emoji": "🪵",
+      "tags": ["재료", "목재"],
+      "recipe": null,
+      "sources": [
+        { "type": "GATHER", "name": "나무 베기", "location": "티르 코네일 북부 숲", "dot": "gather" },
+        { "type": "GATHER", "name": "나무 베기", "location": "에린 숲 일대", "dot": "gather" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "목재 괴",
+      "type": "INTERMEDIATE",
+      "skill": "WOODWORK",
+      "emoji": "🪚",
+      "tags": ["목공", "중간재"],
+      "recipe": {
+        "level": 1,
+        "materials": [
+          { "name": "통나무", "qty": 5, "emoji": "🪵" }
+        ]
+      },
+      "sources": []
+    },
+    {
+      "id": 6,
+      "name": "양털",
+      "type": "MATERIAL",
+      "skill": null,
+      "emoji": "🐑",
+      "tags": ["재료", "섬유"],
+      "recipe": null,
+      "sources": [
+        { "type": "GATHER", "name": "양털 깎기", "location": "티르 코네일 목장", "dot": "gather" },
+        { "type": "GATHER", "name": "양털 깎기", "location": "던바튼 목장", "dot": "gather" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "실",
+      "type": "INTERMEDIATE",
+      "skill": "TAILORING",
+      "emoji": "🧵",
+      "tags": ["재봉", "중간재"],
+      "recipe": {
+        "level": 1,
+        "materials": [
+          { "name": "양털", "qty": 4, "emoji": "🐑" }
+        ]
+      },
+      "sources": []
+    },
+    {
+      "id": 8,
+      "name": "가죽",
+      "type": "MATERIAL",
+      "skill": null,
+      "emoji": "🟫",
+      "tags": ["재료", "가죽"],
+      "recipe": null,
+      "sources": [
+        { "type": "MONSTER", "name": "몬스터 드랍", "location": "에린 일반 사냥터", "dot": "monster" },
+        { "type": "SHOP",    "name": "잡화점 구매", "location": "티르 코네일 잡화점", "dot": "shop" }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "감자",
+      "type": "MATERIAL",
+      "skill": null,
+      "emoji": "🥔",
+      "tags": ["재료", "식재료"],
+      "recipe": null,
+      "sources": [
+        { "type": "GATHER", "name": "호미질 채집", "location": "티르 코네일 농장", "dot": "gather" },
+        { "type": "SHOP",   "name": "식료품점 구매", "location": "던바튼 식료품점", "dot": "shop" }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "우유",
+      "type": "MATERIAL",
+      "skill": null,
+      "emoji": "🥛",
+      "tags": ["재료", "식재료"],
+      "recipe": null,
+      "sources": [
+        { "type": "GATHER", "name": "일상 채집 (젖소)", "location": "티르 코네일 목장", "dot": "gather" },
+        { "type": "SHOP",   "name": "식료품점 구매",    "location": "던바튼 식료품점", "dot": "shop" }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "감자수프",
+      "type": "PRODUCT",
+      "skill": "COOKING",
+      "emoji": "🍲",
+      "tags": ["요리", "완성품"],
+      "recipe": {
+        "level": 5,
+        "materials": [
+          { "name": "감자", "qty": 4, "emoji": "🥔" },
+          { "name": "우유", "qty": 2, "emoji": "🥛" },
+          { "name": "소금", "qty": 1, "emoji": "🧂" }
+        ]
+      },
+      "sources": []
+    },
+    {
+      "id": 12,
+      "name": "소금",
+      "type": "MATERIAL",
+      "skill": null,
+      "emoji": "🧂",
+      "tags": ["재료", "식재료"],
+      "recipe": null,
+      "sources": [
+        { "type": "SHOP", "name": "식료품점 구매", "location": "던바튼 식료품점", "dot": "shop" },
+        { "type": "SHOP", "name": "식료품점 구매", "location": "티르 코네일 식료품점", "dot": "shop" }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "철제 단검",
+      "type": "PRODUCT",
+      "skill": "BLACKSMITH",
+      "emoji": "🗡️",
+      "tags": ["대장장이", "완성품", "무기"],
+      "recipe": {
+        "level": 3,
+        "materials": [
+          { "name": "철 괴",  "qty": 3, "emoji": "⚙️" },
+          { "name": "가죽",   "qty": 1, "emoji": "🟫" }
+        ]
+      },
+      "sources": []
+    },
+    {
+      "id": 14,
+      "name": "마나 허브",
+      "type": "MATERIAL",
+      "skill": null,
+      "emoji": "🌿",
+      "tags": ["재료", "약초"],
+      "recipe": null,
+      "sources": [
+        { "type": "GATHER", "name": "약초 채집", "location": "시드스넷타 남서쪽", "dot": "gather" },
+        { "type": "GATHER", "name": "약초 채집", "location": "파르 언덕", "dot": "gather" }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "마력 물약",
+      "type": "PRODUCT",
+      "skill": "ALCHEMY",
+      "emoji": "⚗️",
+      "tags": ["연금술", "물약", "완성품"],
+      "recipe": {
+        "level": 8,
+        "materials": [
+          { "name": "마나 허브", "qty": 3, "emoji": "🌿" },
+          { "name": "빈 병",     "qty": 1, "emoji": "🫙" },
+          { "name": "유화제",    "qty": 1, "emoji": "💧" }
+        ]
+      },
+      "sources": []
+    },
+    {
+      "id": 16,
+      "name": "빈 병",
+      "type": "MATERIAL",
+      "skill": null,
+      "emoji": "🫙",
+      "tags": ["재료", "용기"],
+      "recipe": null,
+      "sources": [
+        { "type": "SHOP", "name": "잡화점 구매", "location": "던바튼 잡화점", "dot": "shop" }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "유화제",
+      "type": "MATERIAL",
+      "skill": null,
+      "emoji": "💧",
+      "tags": ["재료", "연금 재료"],
+      "recipe": null,
+      "sources": [
+        { "type": "SHOP",    "name": "잡화점 주간 구매 한정", "location": "던바튼 잡화점", "dot": "shop" },
+        { "type": "MONSTER", "name": "심층 던전 보상",        "location": "심층 던전",     "dot": "monster" }
+      ]
+    }
+  ]
+}

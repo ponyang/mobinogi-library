@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="마비노기 모바일 생활 재료 및 제작 레시피 검색">
+<title>에린의 작업대 — 마비노기 모바일 생활 재료 검색</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- 헤더 -->
+  <header class="header">
+    <p class="header-eyebrow">마비노기 모바일</p>
+    <h1 class="header-title">⚒ 에린의 작업대</h1>
+    <p class="header-sub">생활 재료 &amp; 제작 레시피 검색</p>
+  </header>
+
+  <!-- 검색 -->
+  <section class="search-section">
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input class="search-input" type="text" id="searchInput"
+             placeholder="재료 또는 제작템 이름을 입력하세요... (예: 철 괴, 통나무, 감자수프)"
+             autocomplete="off">
+      <button class="search-btn" onclick="doSearch()">검색</button>
+    </div>
+    <div class="filter-row">
+      <span class="filter-chip active" data-filter="all">전체</span>
+      <span class="filter-chip" data-filter="MATERIAL">재료</span>
+      <span class="filter-chip" data-filter="INTERMEDIATE">중간재</span>
+      <span class="filter-chip" data-filter="PRODUCT">완성품</span>
+      <span class="filter-chip" data-filter="COOKING">요리</span>
+      <span class="filter-chip" data-filter="BLACKSMITH">대장장이</span>
+      <span class="filter-chip" data-filter="SMELT">제련</span>
+      <span class="filter-chip" data-filter="TAILORING">재봉</span>
+      <span class="filter-chip" data-filter="ALCHEMY">연금술</span>
+    </div>
+  </section>
+
+  <!-- 메인 그리드 -->
+  <div class="main-grid">
+
+    <!-- 검색 결과 -->
+    <div>
+      <div class="results-header">
+        <span class="results-title" id="resultsTitle">검색 결과</span>
+        <span class="results-count" id="resultsCount"></span>
+      </div>
+      <div id="resultsList"></div>
+    </div>
+
+    <!-- 사이드패널 -->
+    <aside class="side-panel">
+
+      <!-- 제작 계획 -->
+      <div class="panel-box" id="craftPanel">
+        <div class="panel-header">
+          <span class="panel-title">📋 제작 계획</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="panel-badge" id="craftCount">0</span>
+            <button class="panel-clear" onclick="clearCraft()">초기화</button>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div id="craftList">
+            <p class="panel-empty">제작템을 검색 후 추가해보세요</p>
+          </div>
+          <button class="calc-btn" onclick="calcTotal()">전체 재료 계산 →</button>
+        </div>
+      </div>
+
+      <!-- 전체 재료 합산 -->
+      <div class="panel-box" id="totalMatsPanel" style="display:none;">
+        <div class="panel-header">
+          <span class="panel-title">🪣 필요 재료 합산</span>
+        </div>
+        <div class="panel-body" id="totalMatsList"></div>
+      </div>
+
+      <!-- 지역별 동선 -->
+      <div class="panel-box" id="routePanel" style="display:none;">
+        <div class="panel-header">
+          <span class="panel-title">🗺 지역별 동선</span>
+        </div>
+        <div class="panel-body" id="routeList"></div>
+      </div>
+
+    </aside>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
