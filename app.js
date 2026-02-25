@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 async function loadData() {
   try {
     setLoading(true);
-    const res  = await fetch('./data/items.json');
+    const res  = await fetch('./items.json');
     const json = await res.json();
     DB = json.items || [];
     fuse = new Fuse(DB, FUSE_OPTIONS);  // Fuse.js 인스턴스 초기화
